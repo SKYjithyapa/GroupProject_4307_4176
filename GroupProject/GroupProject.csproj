@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\5856.eps" />
+    <None Remove="Images\About.png" />
+    <None Remove="Images\Admin.png" />
+    <None Remove="Images\Admin_button.png" />
+    <None Remove="Images\Admin_change.png" />
+    <None Remove="Images\Credits.png" />
+    <None Remove="Images\Dashboard.png" />
+    <None Remove="Images\download.jpg" />
+    <None Remove="Images\email.png" />
+    <None Remove="Images\Exit.png" />
+    <None Remove="Images\Login.png" />
+    <None Remove="Images\Logo.png" />
+    <None Remove="Images\LogOut.png" />
+    <None Remove="Images\LogOut_change.png" />
+    <None Remove="Images\Password.png" />
+    <None Remove="Images\Password_Light.png" />
+    <None Remove="Images\phone.png" />
+    <None Remove="Images\Register.png" />
+    <None Remove="Images\sclose_def.png" />
+    <None Remove="Images\sclose_mo.png" />
+    <None Remove="Images\Setting.png" />
+    <None Remove="Images\User.png" />
+    <None Remove="Images\Username.png" />
+    <None Remove="Images\Username_Light.png" />
+    <None Remove="Images\User_button.png" />
+    <None Remove="Images\User_change.png" />
+    <None Remove="Images\website.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\sclose_def.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Images\Admin_button.png" />
+    <Resource Include="Images\Register.png" />
+    <Resource Include="Images\5856.eps" />
+    <Resource Include="Images\About.png" />
+    <Resource Include="Images\Admin.png" />
+    <Resource Include="Images\Admin_change.png" />
+    <Resource Include="Images\Credits.png" />
+    <Resource Include="Images\Dashboard.png" />
+    <Resource Include="Images\download.jpg" />
+    <Resource Include="Images\email.png" />
+    <Resource Include="Images\Exit.png" />
+    <Resource Include="Images\Login.png" />
+    <Resource Include="Images\Logo.png" />
+    <Resource Include="Images\LogOut.png" />
+    <Resource Include="Images\LogOut_change.png" />
+    <Resource Include="Images\Password.png" />
+    <Resource Include="Images\Password_Light.png" />
+    <Resource Include="Images\phone.png" />
+    <Resource Include="Images\sclose_mo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Setting.png" />
+    <Resource Include="Images\User.png" />
+    <Resource Include="Images\Username.png" />
+    <Resource Include="Images\Username_Light.png" />
+    <Resource Include="Images\User_button.png" />
+    <Resource Include="Images\User_change.png" />
+    <Resource Include="Images\website.png" />
+  </ItemGroup>
+
+</Project>

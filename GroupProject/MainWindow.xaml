@@ -1,0 +1,105 @@
+﻿<Window x:Class="GroupProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GroupProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="1000"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen">
+    <Window.DataContext>
+        <local:MainWindowVM></local:MainWindowVM>
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <Grid>
+        <Border CornerRadius="0" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#FF010414" Offset="0.1"/>
+                    <GradientStop Color="#FF020226" Offset="0.7"/>
+
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+        <Border Width="1" Height="350" Background="Silver" Margin="500,90,0,0"
+                    Opacity="0.5" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
+        <StackPanel Height="550" VerticalAlignment="Top" Orientation="Horizontal">
+            
+            <StackPanel Width="500" HorizontalAlignment="Left">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="40,55,0,0">
+                    <TextBlock Text="ABOUT" Foreground="White" FontSize="40" Opacity="0.5" />
+                    <TextBlock Margin="10,0,0,0" Text="Developed by " Foreground="White" FontSize="20" Opacity="0.5" HorizontalAlignment="Left"/>
+                    <TextBlock Margin="10,0,0,0" Text="- Samarakoon P. G. C. EG/2020/4176" Foreground="White" FontSize="20" Opacity="0.5" HorizontalAlignment="Left"/>
+                    <TextBlock Margin="10,0,0,0" Text="- Yaparathna Y. M. S. K. EG/2020/4307" Foreground="White" FontSize="20" Opacity="0.5" HorizontalAlignment="Left"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Width="500" HorizontalAlignment="Right">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Top" Margin="40,55,0,0">
+                    <TextBlock Text="LOGIN" Foreground="White" FontSize="40" Opacity="0.5"
+                           />
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom" Margin="0,70,10,20" >
+                    <Button Style="{StaticResource AdminImageButtonStyle}"
+                            Command="{Binding Path=openAdminLoginCommand}"/>
+                    <Button Style="{StaticResource UserImageButtonStyle}"
+                            Command="{Binding Path=openUserLoginCommand}"/>
+                </StackPanel>
+                
+
+
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Height="150" VerticalAlignment="Bottom" Background="#000033" 
+                    Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal">
+                <Image Source="Images/Logo.png" Width="110" Height="110" Margin="10,10,0,10"/>
+                <StackPanel Grid.Column="1" Orientation="Vertical">
+                    <TextBlock Text="STUDENT MANAGEMENT SYSTEM" Margin="20,27,0,0" 
+                               VerticalAlignment="Center" FontSize="25" Foreground="#f5ba1d" />
+                    <TextBlock Text="FACULTY OF ENGINEERING" Margin="20,2,0,0" 
+                               VerticalAlignment="Center" FontSize="15" Foreground="#f5ba1d"/>
+                    <TextBlock Text="UNIVERSITY OF RUHUNA" Margin="20,0,0,0" 
+                               VerticalAlignment="Center" FontSize="15" Foreground="#f5ba1d"/>
+                    <TextBlock Text="HAPUGALA, GALLE, SRI LANKA" Margin="20,0,0,0" 
+                               VerticalAlignment="Center" FontSize="15" Foreground="#f5ba1d"/>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Orientation="Vertical" Margin="60,0,0,0">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Images/website.png" Height="20" Margin="0,39,0,0"/>
+                        <TextBlock Text="http://www.eng.ruh.ac.lk" Margin="20,35,0,0" 
+                               VerticalAlignment="Center" FontSize="15" Foreground="Wheat" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Images/email.png" Height="25" Margin="0,10,0,0"/>
+                        <TextBlock Text="webmaster@eng.ruh.ac.lk" Margin="20,6,0,0" 
+                               VerticalAlignment="Center" FontSize="15" Foreground="Wheat" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Images/phone.png" Height="20" Margin="0,10,0,0"/>
+                        <TextBlock Text="+(94)0 91 2245765/6" Margin="20,10,0,0" 
+                               VerticalAlignment="Center" FontSize="15" Foreground="Wheat" />
+                    </StackPanel>
+
+
+                </StackPanel>
+
+            </StackPanel>
+        </StackPanel>
+        <Button x:Name="CloseBtn"
+                Style="{StaticResource CloseBtnStyle}"
+                Click="CloseBtn_Click" />
+
+    </Grid>
+</Window>
